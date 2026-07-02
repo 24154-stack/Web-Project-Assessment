@@ -43,11 +43,11 @@ img {
     object-fit: cover;
 }
 
-.row {
+.row1 {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 50px;
-    padding: 20px;
+    padding: 60px;
     align-items: stretch;
 }
 
@@ -117,4 +117,20 @@ img {
     font-size: clamp(0.85rem, 1.3vw, 1.6rem);
     line-height: 1.5;
     font-weight: bold;
+}
+
+.row2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    padding: 60px;
+    align-items: stretch;
+}
+
+.delicious-in-dungeon-card {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    border-radius: 20px;
+    overflow: hidden; 
+    background-color: #b2a496;
 }
