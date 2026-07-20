@@ -171,3 +171,26 @@ img {
     font-weight: bold;
     background-color: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));  
 }
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 60px;
+    background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.contact p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(0.85rem, 1.3vw, 1.6rem);
+    line-height: 1.5;
+    font-weight: bold;
+    color: white;
+}
+
+.contact h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    line-height: 1.5;
+    font-weight: bold;
+    color: white;
+}
