@@ -134,3 +134,40 @@ img {
     overflow: hidden; 
     background-color: #b2a496;
 }
+
+.one-punch-man-card {
+    position: relative;
+    overflow: visible;
+    border-radius: 20px;
+}
+
+.one-punch-man-card .base-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    object-position: center;
+}
+
+.one-punch-man-card .text-overlay {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 50%;         
+    height: 100%;
+    color: black;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.one-punch-man-card p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(0.85rem, 1.3vw, 1.6rem);
+    line-height: 1.5;
+    font-weight: bold;
+    background-color: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));  
+}
