@@ -169,7 +169,7 @@ img {
     font-size: clamp(0.85rem, 1.3vw, 1.6rem);
     line-height: 1.5;
     font-weight: bold;
-    background-color: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));  
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));  
 }
 
 .contact {
@@ -204,9 +204,9 @@ img {
 }
 
 form {
-    display: inline;
-    gap: 20%;
-    background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    display: flex;
+    gap: 10px;
+    width: 100%;
 }
 
 input[type="email"] {
@@ -218,7 +218,7 @@ input[type="email"] {
     font-size: clamp(0.85rem, 1vw, 1.6rem);
 }
 
-button[type="submit"] {
+button[type="button"] {
     width: 30%;
     height: auto;
     background-color: #af534c;
