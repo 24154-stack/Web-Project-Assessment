@@ -9,7 +9,7 @@ body, html {
     height: 100%;
 }
 
-.hero-image {
+.main-hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/Hot-Pot-hero-image.jpg");
     height: 70%;
     background-position: center;
@@ -18,7 +18,16 @@ body, html {
     position: relative;
 }
 
-.hero-text {
+.about-hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Images/family-eating-hot-pot.webp");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.main-hero-text, .about-hero-text, .menu-hero-text {
     text-align: center;
     position: absolute;
     top: 50%;
@@ -27,7 +36,6 @@ body, html {
     color: white;
     font-size: 60px;
 }
-
 
 .content {
     padding: 20px;
