@@ -9,6 +9,22 @@ body, html {
     height: 100%;
 }
 
+.linkrow {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    padding: 20px;
+    background-color: black;
+}
+
+.linkrow a {
+    text-decoration: underline;
+    color: white;
+    font-weight: 550;
+    font-size: clamp(1.5rem, 1.5vw, 2rem);
+    margin-right: 40px;
+}
+
 .main-hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/Hot-Pot-hero-image.jpg");
     height: 70%;
