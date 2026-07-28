@@ -43,6 +43,15 @@ body, html {
     position: relative;
 }
 
+.menu-hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Images/Hot-Pot-hero-image.jpg");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
 .main-hero-text, .about-hero-text, .menu-hero-text {
     text-align: center;
     position: absolute;
@@ -250,4 +259,39 @@ button[type="button"] {
     cursor: pointer;
     border-radius: 20px;
     font-size: clamp(0.85rem, 1vw, 1.6rem);
+}
+
+.meat h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(2.5rem, 3vw, 4rem);
+    transform: translate(-10%, 10%);
+    line-height: 1.5;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+.meat-slider img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    scroll-snap-align: start;
+}
+
+.meat-slider {
+    width: auto;
+    margin: 20px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 40px) / 4);
+    gap: 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.meat {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
