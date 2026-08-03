@@ -264,34 +264,35 @@ button[type="button"] {
 .meat h1 {
     font-family: 'Courier New', Courier, monospace;
     font-size: clamp(2.5rem, 3vw, 4rem);
-    transform: translate(-10%, 10%);
     line-height: 1.5;
     font-weight: bold;
     color: black;
-    text-align: center;
+    text-align: left;
+    margin-left: 50px;
 }
 
 .meat-slider img {
-    width: 200px;
-    height: 200px;
+    height: 70%;
     object-fit: cover;
     border-radius: 10px;
     scroll-snap-align: start;
 }
 
+.meat-slider h2 {
+    text-align: center;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
 .meat-slider {
     width: auto;
-    margin: 20px;
+    margin-left: 20px;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% - 40px) / 4);
-    gap: 10px;
+    gap: 4rem;
     overflow-x: auto;
     scrollbar-width: none;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
 }
-
-.meat {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-}
+ 
