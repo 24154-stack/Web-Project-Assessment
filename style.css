@@ -159,6 +159,20 @@ img {
     align-items: stretch;
 }
 
+@media (max-width: 768px) {
+    .row1 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .row2 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
 .delicious-in-dungeon-card {
     display: grid;
     grid-template-columns: 2fr 1fr; 
@@ -209,6 +223,7 @@ img {
     grid-template-columns: 1fr 1fr;
     width: 100%;
     background-color: black;
+    padding: 40px;
 }
 
 .contact p {
@@ -268,6 +283,14 @@ button[type="button"] {
     font-size: clamp(0.85rem, 1vw, 1.6rem);
 }
 
+@media (max-width: 768px) {
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px;
+    }
+}
+
 .meat h1, .vegetables h1 {
     font-family: 'Courier New', Courier, monospace;
     font-size: clamp(2.5rem, 3vw, 4rem);
@@ -305,4 +328,39 @@ button[type="button"] {
  
 .meat, .vegetables {
     margin: 20px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    height: auto;
+    align-items: center;
+    padding: 20px;
+}
+
+.about-content p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(0.85rem, 1.3vw, 1.6rem);
+    line-height: 1.5;
+    font-weight: bold;
+    text-align: left;
+}
+
+.about-content img {
+    height: 50%;
+    width: 70%;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .about-content img {
+        height: auto;
+    }
 }
