@@ -21,31 +21,26 @@ body, html {
     text-decoration: underline;
     color: white;
     font-weight: 550;
-    font-size: clamp(1.5rem, 1.5vw, 2rem);
+    font-size: clamp(1.5rem, 1.5vw, 2rem);  /*use clamp in most areas to make it reponsive*/
     margin-right: 40px;
 }
 
 .main-hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/Hot-Pot-hero-image.jpg");
     height: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
 }
 
 .about-hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Images/family-eating-hot-pot.webp");
     height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
 }
 
 .menu-hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Images/Hot-Pot-hero-image.jpg");
     height: 50%;
+}
+
+.main-hero-image, .about-hero-image, .menu-hero-image {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,7 +52,7 @@ body, html {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /*nice tweak to center the text in the absolute middle of the image by translating back by half its width and height*/
     color: white;
     font-size: 60px;
 }
@@ -106,7 +101,7 @@ img {
     height: 100%;
     background-color: rgba(45, 45, 45, 0.85); 
     color: white;
-    border-top-left-radius: 20px;
+    border-top-left-radius: 20px; /*we want the rounded corner only on one side*/
     border-bottom-left-radius: 20px;
     display: flex;
     align-items: center;
@@ -159,7 +154,7 @@ img {
     align-items: stretch;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /*Mobile friendly responsive design*/
     .row1 {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -171,9 +166,7 @@ img {
         gap: 20px;
         padding: 20px;
     }
-}
 
-@media (max-width: 768px) {
     .oden-card, .delicious-in-dungeon-card {
         grid-template-columns: 1fr; 
     }
@@ -328,7 +321,7 @@ button[type="button"] {
 }
 
 .meat-slider img, .vegetable-slider img {
-    height: 70%;
+    height: 20rem;
     object-fit: cover;
     border-radius: 10px;
     scroll-snap-align: start;
@@ -344,36 +337,38 @@ button[type="button"] {
     margin-left: 20px;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc((100% - 80px) / 4);
+    grid-auto-columns: calc((100% - 12rem) / 4); /*Shows four items at a time accounting for the gap of 4rem between items*/
     gap: 4rem;
-    overflow-x: auto;
-    scrollbar-width: none;
+    overflow-x: auto;  /* horizontal scrollbar only if not enough space for a single item */
+    scrollbar-width: none; /*hides scrollbar in Firefox*/
+    ::-webkit-scrollbar { display: none; } /* hides scrollbar in Chrome, Safari, and Edge */
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
 }
 
-@media (max-width: 768px) {
+/*different number of columns based on screen size, chose 1200, 900, and 600px as cutoffs for responsiveness*/
+@media (max-width: 1200px) {
     .meat-slider, .vegetable-slider {
-        grid-auto-columns: calc(100% - 40px);
-        gap: 1.5rem;
+        grid-auto-columns: calc((100% - 8rem) / 3); /* 3 items in screen */
     }
-    
-    .meat-slider h2, .vegetable-slider h2 {
-        font-size: 1.2rem;
-    }
+}
 
-    .meat-slider p, .vegetable-slider p {
-        font-size: 1rem;
+@media (max-width: 900px) {
+    .meat-slider, .vegetable-slider {
+        grid-auto-columns: calc((100% - 4rem) / 2); /* 2 items in screen */
     }
+}
 
-    .meat-slider img, .vegetable-slider img {
-        height: 200px;
+@media (max-width: 600px) {
+    .meat-slider, .vegetable-slider {
+        grid-auto-columns: calc(100% - 40px); /* 1 item filling screen */
     }
 }
  
 .meat, .vegetables {
     margin: 20px;
 }
+
 
 .origin-story-text h2 {
     font-family: 'Courier New', Courier, monospace;
@@ -388,8 +383,8 @@ button[type="button"] {
     font-size: clamp(0.85rem, 1.3vw, 1.6rem);
     line-height: 1.5;
     font-weight: bold;
-    background-clip: text;
-    -webkit-background-clip: text;
+    background-clip: text; /*targets text in modern browsers*/
+    -webkit-background-clip: text; /*targets text in older browsers*/
     color: transparent;
     background-image: linear-gradient(rgba(255, 65, 108, 1), rgba(255, 75, 43, 1), rgba(241, 196, 15, 1));
 }
@@ -399,7 +394,7 @@ button[type="button"] {
     flex-direction: column;
     justify-content: center;
     padding: 40px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.25));
+    background-color: black;
     color: white;
     margin: 40px;
     border-radius: 20px;
@@ -421,13 +416,37 @@ button[type="button"] {
 .origin-story-image .img1 {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    border-top-right-radius: 0;
+    border-top-right-radius: 0; /*have to set to zero because the default border-radius is 10px for all images, so we need to override it here*/
     border-bottom-right-radius: 0;
 }
-
+/* stacked horizontally with rounded corners on sides of stack*/
 .origin-story-image .img2 {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+}
+
+@media (max-width: 768px) {
+    .origin-story-image {
+        grid-template-columns: 1fr;
+    }
+
+    .origin-story-image img {
+        height: auto;
+    }
+
+    .origin-story-image .img1 {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 0;
+    }
+    /* changes so that the images are stacked vertically and rounded only on top and bottom of stack*/
+    .origin-story-image .img2 {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 20px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 20px;
+    }
 }
