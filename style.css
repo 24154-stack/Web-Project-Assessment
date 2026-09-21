@@ -327,7 +327,7 @@ button[type="button"] {
     scroll-snap-align: start;
 }
 
-.meat-slider h2,.vegetable-slider h2 {
+.meat-slider h2, .vegetable-slider h2 {
     text-align: center;
     font-size: clamp(1rem, 1.5vw, 2rem);
 }
@@ -370,7 +370,7 @@ button[type="button"] {
 }
 
 
-.origin-story-text h2 {
+.origin-story-text h2, .chongqing-base h2 {
     font-family: 'Courier New', Courier, monospace;
     font-size: clamp(1.5rem, 2vw, 2.5rem);
     line-height: 1.5;
@@ -378,7 +378,7 @@ button[type="button"] {
     margin-bottom: 20px;
 }
 
-.origin-story-text p {
+.origin-story-text p, .chongqing-base p {
     font-family: 'Courier New', Courier, monospace;
     font-size: clamp(0.85rem, 1.3vw, 1.6rem);
     line-height: 1.5;
@@ -386,18 +386,24 @@ button[type="button"] {
     background-clip: text; /*targets text in modern browsers*/
     -webkit-background-clip: text; /*targets text in older browsers*/
     color: transparent;
-    background-image: linear-gradient(rgba(255, 65, 108, 1), rgba(255, 75, 43, 1), rgba(241, 196, 15, 1));
+    background-image: linear-gradient(rgba(31, 28, 29, 0.877), rgb(24, 21, 21), rgb(63, 63, 62));
 }
 
-.origin-story-text {
+.origin-story-text, .chongqing-base-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 40px;
-    background-color: black;
-    color: white;
+    background-color: ivory;
+    color: rgb(14, 3, 3);
     margin: 40px;
     border-radius: 20px;
+}
+
+.chongqing-base-image {
+    padding: 40px;
+    border-radius: 60px;    
+    height: 60vh;
 }
 
 .origin-story-image {
@@ -407,7 +413,6 @@ button[type="button"] {
 }
 
 .origin-story-image img {
-    display: flex;
     object-fit: cover;
     width: 100%;
     height: 100%;
